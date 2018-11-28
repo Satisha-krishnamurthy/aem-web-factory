@@ -1,0 +1,42 @@
+<div data-sly-test="${wcmmode.edit}">
+	Configure Primary Menu Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='gsk-web-platform.primary-menu'}"/>
+
+<sly data-sly-test="${!properties.disableComponent}">
+	<sly data-sly-use.commonModel="com.gsk.web.platform.gsk_aem_web_platform.core.models.common.BaseComponentModel">
+		
+			<div id="${commonModel.component.randomNumber}" class="primary-menu ${commonModel.component.customStyleClass}"> 
+      			<div class="container-fluid hidden-xs">
+        			<div class="container">
+          				<div class="row">
+           					<div class="col-md-6 col-xs-6">
+              					<ul class="list-inline">
+                					<li><a href="#">Get Coupon</a></li>
+                					<li><a href="#">Where to Buy</a></li>
+              					</ul>
+            				</div>
+            				<div class="col-md-6 col-xs-6 text-right">
+              					<ul class="list-inline">
+                					<li><a href="#">For Professionals</a></li>
+                					<li>
+                  						<div class="form-group">
+                    						<select class="form-control" id="country">
+                      							<option value="USA">USA</option>
+                      							<option value="UK">UK</option>
+                    						</select>
+                 	 					</div>
+                					</li>
+                					<li><a href="#"><img src="assets/images/gsk-logo.png" alt="GSK logo" /></a></li>
+              					</ul>
+            				</div>
+          				</div>
+        			</div>
+      			</div>
+    		</div>
+
+    	
+    </sly>
+</sly>

@@ -1,0 +1,42 @@
+<div data-sly-test="${wcmmode.edit}">
+	Configure Teaser Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='gsk-web-platform.teaser'}"/>
+
+<sly data-sly-test="${!properties.disableComponent}">
+	<sly data-sly-use.commonModel="com.gsk.web.platform.gsk_aem_web_platform.core.models.common.BaseComponentModel">
+
+		<div id="teaser-${commonModel.component.randomNumber}" class="teaser ${commonModel.component.customStyleClass}">
+		    <div class="dentist-recommend">
+      			<section class="container-fluid">
+        			<div class="container">
+          				<div class="row">
+            				<div class="col-md-12">
+              					<div class="text-center">
+                					<h3>Engineered for Speed</h3>
+              					</div>
+              					<div class="title-border"></div>
+            				</div>
+            				<div class="col-md-12">
+              					<div class="col-md-6 col-md-offset-3">
+                					<div class="dentist-text text-center">
+                  						<p>When it comes to sensitivity pain, speed matters. See how speed also plays a pivotal role in
+                    					science, style and training.</p>
+               	 					</div>
+              					</div>	
+            				</div>
+            				<div class="col-md-12">
+              					<div class="text-center">
+                					<button type="button" class="btn pro-btn learn-more-btn pro-btn-props">Learn More</button>
+             	 				</div>
+           	 				</div>
+          				</div>
+        			</div>
+      			</section>
+    		</div>
+		</div>	
+
+	</sly>
+</sly>

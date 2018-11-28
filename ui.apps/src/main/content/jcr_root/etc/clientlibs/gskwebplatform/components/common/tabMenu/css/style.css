@@ -1,0 +1,131 @@
+.sensodyne-tab h3 {
+    color: #283176;
+    font-family: 'Roboto-Black', Sans-Serif;
+    font-weight: 700;
+    font-size: 28px;
+    margin-top: 10px;
+}
+
+.sensodyne-tab h4 {
+    color: #575757;
+    font-family: 'Roboto-Black', Sans-Serif;
+    font-weight: 700;
+}
+
+.sensodyne-tab .nav-tabs>li a {
+    font-size: 18px;
+    font-family: 'Roboto-Black', Sans-Serif;
+    font-weight: 700;
+    color: #bbbbbb;
+}
+
+.sensodyne-tab .nav-tabs>li.active>a {
+    border-color: transparent;
+    border-bottom: 1px solid #ddd;
+    color: #283176;
+}
+
+.sensodyne-tab .nav-tabs>li>a:hover {
+    background: none;
+    border-color: transparent;
+    color: #283176;
+}
+
+@media (min-width: 768px) {
+    .sensodyne-tab .panel-heading {
+        display: none;
+    }
+    .sensodyne-tab .panel {
+        border: none;
+        box-shadow: none;
+    }
+    .sensodyne-tab .panel-collapse {
+        height: auto;
+    }
+    .sensodyne-tab .panel-collapse.collapse {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .sensodyne-tab {
+        background: #f7f7f7;
+    }
+    .sensodyne-tab .panel-body{
+        padding: 15px 0;
+    }
+    .sensodyne-tab .tab-content .tab-pane {
+        display: block;
+        border: none;
+    }
+    .sensodyne-tab .nav-tabs {
+        display: none;
+    }
+    .sensodyne-tab .panel-title a {
+        display: block;
+        font-size: 18px;
+        font-family: 'Roboto-Black', Sans-Serif;
+        font-weight: 700;
+        color: #bbbbbb;
+    }
+    .sensodyne-tab .panel {
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+        margin-top: -2px;
+        border: none;
+        background: none;
+    }
+    .sensodyne-tab .panel-default>.panel-heading {
+        background: none;
+        position: relative;
+        padding: 20px 0;
+        border-color: #bab9ba;
+    }
+    .sensodyne-tab .tab-pane:last-child .panel {
+        border-radius: 0 0 5px 5px;
+    }
+    .sensodyne-tab .panel-heading a {
+        color: #283176;
+    }
+    .sensodyne-tab .panel-heading a.collapsed {
+        color: #575757;
+    }
+    
+    .sensodyne-tab .panel-heading a.collapsed:after {
+        -webkit-border-radius: 999px;
+        -moz-border-radius: 999px;
+        border-radius: 999px;
+        width: 40px;
+        height: 40px;
+        padding: 0px;
+        border: 1px solid #1a99da;
+        color: #1a99da;
+        text-align: center;
+        content: "+";
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 10px;
+        line-height: 39px;
+        font-family: 'Roboto-Regular';
+    }
+    .sensodyne-tab .panel-heading a:after {
+        -webkit-border-radius: 999px;
+        -moz-border-radius: 999px;
+        border-radius: 999px;
+        width: 40px;
+        height: 40px;
+        padding: 0px;
+        border: 1px solid #1a99da;
+        color: #1a99da;
+        text-align: center;
+        content: "-";
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 10px;
+        line-height: 37px;
+        font-family: 'Roboto-Regular';
+    }
+}

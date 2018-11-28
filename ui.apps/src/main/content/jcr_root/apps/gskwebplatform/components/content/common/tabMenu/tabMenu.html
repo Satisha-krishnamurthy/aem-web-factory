@@ -1,0 +1,135 @@
+<div data-sly-test="${wcmmode.edit}">
+	Configure Tab Menu Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='gsk-platform.tab-menu'}"/>
+
+<sly data-sly-test="${!properties.disableComponent}">
+	<sly data-sly-use.commonModel="com.gsk.web.platform.gsk_aem_web_platform.core.models.common.BaseComponentModel">
+    	<sly data-sly-use.model="com.gsk.web.platform.gsk_aem_web_platform.core.models.common.TabMenuModel">
+
+            <div id="tab-menu-${commonModel.component.randomNumber}" class="tab-menu ${commonModel.component.customStyleClass}">
+    
+                <div class="sensodyne-tab">
+                    <section class="container-fluid">
+                        <div class="container">
+                            <ul class="nav nav-tabs">
+                                <li class="active col-md-4 col-xs-4"><a href="#tab1" data-toggle="tab">Ingredients</a></li>
+                                <li class="col-md-4 col-xs-4 text-center"><a href="#tab2" data-toggle="tab">Directions</a></li>
+                                <li class="col-md-4 col-xs-4 text-right"><a href="#tab3" data-toggle="tab">Warnings</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="tab1">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent=".tab-pane" href="#collapseOne">
+                                                    Ingredients
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseOne" class="panel-collapse collapse in">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <h4>Active ingredient</h4>
+                                                        <p>Stannous Fluoride</p>
+                                                        <h4>Inactive ingredient</h4>
+                                                        <p>
+                                                            Glycerin, PEG-8, hydrated silica, pentasodium triphosphate, flavour, sodium lauryl sulfate,
+                                                            titanium dioxide, polyacrylic acid, cocamidopropyl betaine, sodium saccharin
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <h3>Sensodyne Rapid Relief in Action</h3>
+                                                        <div class="video-thumb">
+                                                            <div class="embed-responsive embed-responsive-16by9">
+                                                                <iframe tabindex="0" title="sensodynevideo" allow="" width="500" height="300" src="https://www.youtube.com/embed/Zyw8xBtUkvQ?rel=0?autoplay=0&amp;controls=1&amp;mute=0&amp;loop=0" frameborder="0">
+                                                                </iframe>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="tab-pane" id="tab2">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent=".tab-pane" href="#collapseTwo">
+                                                    Directions
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseTwo" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <h3>Sensodyne Rapid Relief in Action</h3>
+                                                        <div class="video-thumb">
+                                                            <div class="embed-responsive embed-responsive-16by9">
+                                                                <iframe tabindex="0" title="sensodynevideo" allow="" width="500" height="300" src="https://www.youtube.com/embed/Zyw8xBtUkvQ?rel=0?autoplay=0&amp;controls=1&amp;mute=0&amp;loop=0" frameborder="0">
+                                                                </iframe>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <h4>Active ingredient</h4>
+                                                        <p>Stannous Fluoride</p>
+                                                        <h4>Inactive ingredient</h4>
+                                                        <p>Glycerin, PEG-8, hydrated silica, pentasodium triphosphate, flavour, sodium lauryl sulfate,
+                                                          titanium dioxide, polyacrylic acid, cocamidopropyl betaine, sodium saccharin</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="tab-pane" id="tab3">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent=".tab-pane" href="#collapseThree">
+                                                    Warnings
+                                                </a>
+                                            </h4>
+                                        </div>
+        
+                                        <div id="collapseThree" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <h4>Active ingredient</h4>
+                                                        <p>Stannous Fluoride</p>
+                                                        <h4>Inactive ingredient</h4>
+                                                        <p>Glycerin, PEG-8, hydrated silica, pentasodium triphosphate, flavour, sodium lauryl sulfate,
+                                                          titanium dioxide, polyacrylic acid, cocamidopropyl betaine, sodium saccharin</p>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <h3>Sensodyne Rapid Relief in Action</h3>
+                                                        <div class="video-thumb">
+                                                            <div class="embed-responsive embed-responsive-16by9">
+                                                                <iframe tabindex="0" title="sensodynevideo" allow="" width="500" height="300" src="https://www.youtube.com/embed/Zyw8xBtUkvQ?rel=0?autoplay=0&amp;controls=1&amp;mute=0&amp;loop=0" frameborder="0">
+                                                                </iframe>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+		</sly>
+	</sly>
+</sly>

@@ -1,0 +1,96 @@
+ .adv-section {
+     padding-bottom: 30px;
+     min-height: 220px;
+ }
+
+ .adv-banner {
+     margin: 0 auto;
+     width: 1150px;
+ }
+
+ .adv-inner-banner {
+     float: left;
+     width: 49%;
+     margin-bottom: 30px;
+     margin-left: 1%;
+ }
+
+ .adv-banner .find-store {
+     background: url(../../assets/images/store-bg.jpg) no-repeat;
+     padding: 30px;
+     background-size: 100% 100%;
+ }
+
+ .adv-banner .coupon-code {
+     background: url(../../assets/images/coupon-bg.jpg) no-repeat;
+     padding: 30px;
+     background-size: 100% 100%;
+ }
+
+ .adv-banner h3 {
+     color: #fff;
+     font-family: 'Roboto-Black', Sans-Serif;
+     font-weight: 700;
+     font-size: 40px;
+ }
+
+ .adv-banner a {
+     color: #fff;
+     font-family: 'Roboto-Black', Sans-Serif;
+     font-weight: 700;
+     font-size: 20px;
+ }
+
+ .adv-banner .coupon-code .title-border {
+     border-color: #fff;
+     margin: 14px 0 10px;
+ }
+
+ .adv-banner .find-store .title-border {
+     margin: 14px 0 10px;
+ }
+
+ /* Adv banner section ends here */
+
+ @media(max-width:992px) {
+     .adv-banner {
+         width: 100%;
+         padding: 0;
+         margin: 0 auto;
+     }
+     .adv-inner-banner {
+         float: left;
+         width: 48%;
+         margin: 0 0 30px 1.25%;
+     }
+ }
+
+ @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+     .adv-banner {
+         width: 100%;
+         padding: 0;
+         margin: 0 auto;
+     }
+     .adv-inner-banner {
+         float: left;
+         width: 48%;
+         margin: 0 0 30px 1.25%;
+     }
+ }
+
+ @media(max-width:767px) {
+     .adv-banner {
+         width: 100%;
+         padding: 0;
+         margin: 0;
+     }
+     .adv-inner-banner {
+         float: none;
+         width: 100%;
+         margin: 0;
+         margin-bottom: 20px;
+     }
+     .adv-section {
+         margin-bottom: 0px;
+     }
+ }

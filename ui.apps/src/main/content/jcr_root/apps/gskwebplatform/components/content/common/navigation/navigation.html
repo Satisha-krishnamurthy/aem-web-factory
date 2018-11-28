@@ -1,0 +1,30 @@
+<div data-sly-test="${wcmmode.edit}">
+	Configure Navigation Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='gsk-web-platform.navigation'}"/>
+
+<sly data-sly-test="${!properties.disableComponent}">
+	<sly data-sly-use.commonModel="com.gsk.web.platform.gsk_aem_web_platform.core.models.common.BaseComponentModel">
+
+        <div class="main-menu">
+      		<nav class="navbar">
+        		<div class="container">
+          			<div class="row">
+            			<div class="collapse navbar-collapse" id="primary-navbar-collapse">
+              				<ul class="nav navbar-nav">
+                				<li class="active"><a href="#">Understanding Sensitivity <span class="sr-only">(current)</span></a></li>
+                				<li><a href="#">About Sensodyne</a></li>
+                				<li><a href="#">Our Products</a></li>
+                				<li><a href="#">Oral Health Tips</a></li>
+                				<li><a href="#">FAQs</a></li>
+              				</ul>
+            			</div>
+          			</div>
+       	 		</div>
+      		</nav>
+    	</div>
+
+	</sly>
+</sly>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Tab Menu Component Dialog"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Tab Menu Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <config
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Configurations"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <viewType
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                fieldDescription="View Type in the Tab Body"
+                                fieldLabel="View Type"
+                                name="./viewType">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <option1
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Tabs"
+                                        value="tabs"/>
+                                    <option2
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Accordian"
+                                        value="accordian"/>
+                                </items>
+                            </viewType>
+                            <sectionHeading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="Section Heading"
+                                name="./sectionHeading"/>
+                            <tabItems
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/multifield"
+                                class="full-width"
+                                eaem-nested=""
+                                fieldLabel="Add New Tab">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                    acs-commons-nested=""
+                                    name="./tabItems">
+                                    <layout
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                                        method="absolute"/>
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <tabTitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    allowBlank="true"
+                                                    autoDelete="{Boolean}true"
+                                                    fieldLabel="Tab Title"
+                                                    name="./tabTitle"/>
+                                                <bodyType
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/select"
+                                                    fieldDescription="Body Type"
+                                                    fieldLabel="Body Type"
+                                                    name="./bodyType">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <option2
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Text"
+                                                            value="text"/>
+                                                        <option1
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="List"
+                                                            value="list"/>
+                                                    </items>
+                                                </bodyType>
+                                                <listItems
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/multifield"
+                                                    class="full-width"
+                                                    eaem-nested=""
+                                                    fieldLabel="Add List Item">
+                                                    <field
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                                        acs-commons-nested=""
+                                                        name="./listItems">
+                                                        <layout
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                                                            method="absolute"/>
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <column
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/foundation/container">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <title
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                                        allowBlank="true"
+                                                                        autoDelete="{Boolean}true"
+                                                                        fieldLabel="Title"
+                                                                        name="./title"/>
+                                                                    <text
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/foundation/form/textarea"
+                                                                        allowBlank="true"
+                                                                        autoDelete="{Boolean}true"
+                                                                        fieldLabel="Text"
+                                                                        name="./text"/>
+                                                                </items>
+                                                            </column>
+                                                        </items>
+                                                    </field>
+                                                </listItems>
+                                                <bodyText
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textarea"
+                                                    allowBlank="true"
+                                                    autoDelete="{Boolean}true"
+                                                    fieldLabel="Body Text"
+                                                    name="./bodyText"/>
+                                                <assetType
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/select"
+                                                    fieldDescription="Asset Type in the Tab Body"
+                                                    fieldLabel="Asset Type"
+                                                    name="./assetType">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <option1
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Image"
+                                                            value="image"/>
+                                                        <option2
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Video"
+                                                            value="video"/>
+                                                    </items>
+                                                </assetType>
+                                                <image
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                    allowBlank="true"
+                                                    autoDelete="{Boolean}true"
+                                                    fieldLabel="Image"
+                                                    name="./image"/>
+                                                <imageAltText
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    allowBlank="true"
+                                                    autoDelete="{Boolean}true"
+                                                    fieldLabel="Image Alt Text"
+                                                    name="./imageAltText"/>
+                                                <imageCaption
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    allowBlank="true"
+                                                    autoDelete="{Boolean}true"
+                                                    fieldLabel="Image Caption"
+                                                    name="./imageCaption"/>
+                                                <video
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                    allowBlank="true"
+                                                    autoDelete="{Boolean}true"
+                                                    fieldLabel="Video"
+                                                    name="./video"/>
+                                                <videoType
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/select"
+                                                    fieldDescription="Video Type - DAM or Youtube"
+                                                    fieldLabel="Video Type"
+                                                    name="./videoType">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <option1
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="DAM Video"
+                                                            value="dam"/>
+                                                        <option2
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Youtube"
+                                                            value="youtube"/>
+                                                    </items>
+                                                </videoType>
+                                                <alignmentType
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/select"
+                                                    fieldDescription="Alignment Type in the Tab Body"
+                                                    fieldLabel="Alignment Type"
+                                                    name="./alignmentType">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <option1
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Text Left Asset Right"
+                                                            value="text-left"/>
+                                                        <option2
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Asset Left Text Right"
+                                                            value="asset-left"/>
+                                                    </items>
+                                                </alignmentType>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </tabItems>
+                        </items>
+                    </column>
+                </items>
+            </config>
+            <view
+                jcr:primaryType="nt:unstructured"
+                jcr:title="View"
+                sling:resourceType="granite/ui/components/foundation/include"
+                path="gskwebplatform/components/content/common/dialogTabs/view"/>
+        </items>
+    </content>
+</jcr:root>

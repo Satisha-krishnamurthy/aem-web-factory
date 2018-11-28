@@ -1,0 +1,44 @@
+<div data-sly-test="${wcmmode.edit}">
+	Configure List of Links Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='gsk-web-platform.list-of-links'}"/>
+
+<sly data-sly-test="${!properties.disableComponent}">
+	<sly data-sly-use.commonModel="com.gsk.web.platform.gsk_aem_web_platform.core.models.common.BaseComponentModel">
+    	<sly data-sly-use.model="com.gsk.web.platform.gsk_aem_web_platform.core.models.common.ListOfLinksModel">
+
+            <div id="list-of-links-${commonModel.component.randomNumber}" class="list-of-links ${commonModel.component.customStyleClass}">
+    
+                <ul class="nav navbar-nav" data-sly-list.link="${model.listOfLinks}">
+                    <li class="${link.styleClass}">
+                        <a href="${link.url}" target="${link.openInNewWindow == 'true' ? '_blank' : ''}">
+                        	<sly data-sly-test="${link.type == 'text'}">
+                            	${link.text}
+                            </sly>
+                            <sly data-sly-test="${link.type == 'image'}">
+                            	<img src="${link.image}" alt="${link.imageAltText}"/>
+                            </sly>
+                        </a> <span class="${link.subLinks ? 'icon-arrow-down' : ''}"></span>
+    
+                        <ul data-sly-test="${link.subLinks}">
+                            <sly data-sly-list.sublink="${item.subLinks}">
+                                <li>
+                                    <sly data-sly-test="${sublink.type == 'text'}">
+                            			${sublink.text}
+                            		</sly>
+                            		<sly data-sly-test="${sublink.type == 'image'}">
+                            			<img src="${sublink.image}" alt="${sublink.imageAltText}"/>
+                            		</sly>
+                                </li>
+                            </sly>
+                        </ul>
+                    </li>   
+                </ul>
+    
+            </div>
+
+		</sly>
+   	</sly>
+</sly>

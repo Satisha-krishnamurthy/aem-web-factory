@@ -1,0 +1,47 @@
+.popular-product .products-parent li img {
+    width: 190px;
+}
+
+.popular-product h3 {
+    color: #032466;
+    font-family: 'Roboto-Black', Sans-Serif;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.popular-product .products-parent ul {
+    display: flex;
+}
+
+.popular-product .products-parent li {
+    min-width: 240px;
+}
+
+.popular-product .products-parent .product-title {
+    height: 130px;
+}
+
+.products-parent h4 {
+    font-weight: 700;
+    font-family: 'Roboto-Black', Sans-Serif;
+    font-size: 22px;
+    color: #032466;
+}
+
+@media(max-width:767px) {
+    .popular-product .products-parent {
+        overflow: auto;
+    }
+}
+
+@media(max-width:992px) {
+    .popular-product .products-parent {
+        overflow: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .popular-product .products-parent {
+        overflow: auto;
+    }
+}

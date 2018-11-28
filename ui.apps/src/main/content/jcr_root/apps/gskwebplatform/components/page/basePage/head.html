@@ -1,0 +1,52 @@
+<template data-sly-template.head="${ @ page }" data-sly-use.headlibRenderer="headlibs.html">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+		<meta name="description" content="${page.seoDescription}"/>
+		<meta name="keywords" content="${page.keywords}"/>
+
+        <title>${page.title}</title>
+
+    	<link rel="icon" type="image/png" href="" sizes="16x16"/>
+        <link rel="icon" type="image/png" href="" sizes="32x32"/>
+        <link rel="icon" type="image/png" href="" sizes="64x64"/>
+        <link rel="icon" type="image/png" href="" sizes="128x128"/>
+
+        <!--fav-icons-apple-touch-->
+        <link rel="apple-touch-icon" type="image/png" href="../../global/images/favicon-128x128.png" sizes="128x128"/>
+        <link rel="alternate" href="${page.siteName}/${page.currentPagePath}" hreflang="${page.country}-${page.lang}"/>
+
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        
+        <!-- Updated Tags -->
+        <meta itemprop="name" content="${page.siteName}">
+        <meta itemprop="keywords" content="${page.keywords}">
+        <meta itemprop="description" content="${page.seoDescription}">
+        <meta itemprop="image" content="${page.seoThumbnailImage}">
+ 
+        <meta name="twitter:card" content="${page.seoDescription}">
+        <meta name="twitter:site" content="${page.siteName}">
+        <meta name="twitter:creator" content="${page.siteName}">
+        <meta name="twitter:title" content="${page.seoTitle}">
+        <meta name="twitter:seoDescription" content="${page.seoDescription}">
+        <meta name="twitter:image:src" content="${page.seoThumbnailImage}">
+ 
+        <meta property="og:site_name" content="${page.siteName}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="${page.seoTitle}" />
+        <meta property="og:url" content="${page.siteName}" />
+        <meta property="og:image" content="${page.seoThumbnailImage}" />
+        <meta property="og:description" content="${page.seoDescription}" />
+        
+        <script>${properties.customHeadScript @context='unsafe'}</script>
+        <script>${properties.headAnalytics @context='unsafe'}</script>
+
+        <sly data-sly-include="customheaderlibs.html"></sly>
+        <sly data-sly-call="${headlibRenderer.headlibs @designPath = page.designPath}"></sly>
+
+        ${page.customMetaTags @context='html'}
+        <script>${page.headScript @context = 'unsafe'} </script>
+    </head>
+</template>

@@ -1,0 +1,79 @@
+<div data-sly-test="${wcmmode.edit}">
+	Configure Page Listing Model
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='gsk-web-platform.page-listing'}"/>
+
+<sly data-sly-test="${!properties.disableComponent}">
+	<sly data-sly-use.commonModel="com.gsk.web.platform.gsk_aem_web_platform.core.models.common.BaseComponentModel">
+
+	    	<section id="page-listing-${commonModel.component.randomNumber}" class="page-listing ${commonModel.component.customStyleClass}">
+				<section class="container-fluid">
+      				<div class="popular-product">
+        				<div class="container">
+          					<div class="row">
+            					<div class="col-md-12">
+              						<h3 class="text-center">Most Popular Products</h3>
+              						<div class="d-flex justify-content-center">
+                						<div class="title-border"></div>
+              						</div>
+            					</div>
+            					<div class="col-md-12">
+              						<div class="products-parent">
+               							<div class="row">
+                 							<ul class="list-inline ">
+                   								<li class="text-center">
+                      								<div class="product-title">
+                        								<h4>Rapid Relief</h4>Mint
+                      								</div>
+                      								<div class="products-img">
+                        								<img class="img-responsive center-block" src="assets/images/Product-Rapid-Relief-Mint-dt@2x.jpg" alt="Product Rapid Relief Mint" />
+                      								</div>
+                    							</li>
+                    							<li class="text-center ">
+                      								<div class="product-title">
+                        								<h4>Extra Whitening</h4>
+                      								</div>
+                      								<div class="products-img">
+                        								<img class="img-responsive center-block" src="assets/images/Product-Essential-Care-extra-whitening-dt@2x.jpg" alt="Essential Care extra whitening" />
+                      								</div>
+                    							</li>
+                   								<li class="text-center ">
+                   									<div class="product-title">
+                       									<h4>Repair and Protect</h4>
+                        								Whitening
+                      								</div>
+                      								<div class="products-img">
+                        								<img class="img-responsive center-block" src="assets/images/Product-Repair-Protect-whitening-dt@2x.jpg" alt="Product Repair Protect whitening" />
+                      								</div>
+                    							</li>
+                    							<li class="text-center">
+                      								<div class="product-title">
+                       									<h4>Complete Protection </h4>
+                       									Extra Fresh
+                   									</div>
+                   									<div class="products-img">
+                       									<img class="img-responsive center-block" src="assets/images/Product-Complete-Protection-extra-fresh-dt@2x.jpg" alt="Product Complete Protection extra fresh" />
+                    								</div>
+                    							</li>
+                    							<li class="text-center">
+                      								<div class="product-title">
+                        								<h4>Fresh Mint</h4>
+                      								</div>
+                      								<div class="products-img">
+                       	 								<img class="img-responsive center-block" src="assets/images/Product-Essential-Care-fresh-mint-dt@2x.jpg" alt="Product Essential Care fresh mint" />
+                      								</div>
+                    							</li>
+                  							</ul>
+                						</div>
+              						</div>
+           						</div>
+        					</div>
+        				</div>
+      				</div>
+    			</section>
+			</section>
+
+	</sly>
+</sly>

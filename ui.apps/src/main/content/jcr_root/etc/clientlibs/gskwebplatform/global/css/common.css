@@ -1,0 +1,30 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+section {
+    padding: 40px 0;
+}
+
+a {
+    color: #1a99da;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+b, strong {
+    font-family: 'Roboto-Black', Sans-Serif;
+    font-weight: 700;
+}
+
+.sensodyne-wrapper {
+    padding: 0;
+}
+
+@media(max-width:767px) {
+    section {
+        padding: 20px 0;
+    }
+}

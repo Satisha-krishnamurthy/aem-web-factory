@@ -1,0 +1,54 @@
+<div data-sly-test="${wcmmode.edit}">
+	Configure Header Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='gsk-web-platform.header'}"/>
+
+<sly data-sly-test="${!properties.disableComponent}">
+	<sly data-sly-use.commonModel="com.gsk.web.platform.gsk_aem_web_platform.core.models.common.BaseComponentModel">
+
+		<header class="sensodyne-header">
+
+            <div data-sly-resource="${'primary-menu' @ resourceType='gskwebplatform/components/content/common/primaryMenu'}"></div>
+
+    		<div class="secondary-menu">
+      			<div class="container">
+        			<div class="row">
+          				<div class="col-md-4 col-xs-3">
+            				<div class="social-icons hidden-xs">
+              					<ul class="list-inline">
+                					<li><a href="#"><img src="assets/images/facebook-header.svg" alt="facebook"/></a></li>
+                					<li><a href="#"><img src="assets/images/youtube-header.svg" alt="youtube"/></a></li>
+                					<li><a href="#"><img src="assets/images/twitter-header.svg" alt="twitter"/></a></li>
+              					</ul>
+            				</div>
+            				<div class="navbar-header">
+              					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primary-navbar-collapse" aria-expanded="false">
+                					<span class="sr-only">Toggle navigation</span>
+                					<span class="icon-bar"></span>
+                					<span class="icon-bar"></span>
+                					<span class="icon-bar"></span>
+              					</button>
+            				</div>
+          				</div>
+          				<div class="col-md-4 col-xs-6">
+            				<a class="navbar-brand" href="#"><img src="assets/images/logo.svg" alt="sesodyne logo"/></a>
+          				</div>
+          				<div class="col-md-4 col-xs-3">
+            				<div class="search">
+              					<a href="#"> 
+                                	<img src="assets/images/search.svg" alt="search">
+                                </a>
+            				</div>
+         		 		</div>
+        			</div>
+      			</div>
+    		</div>
+
+            <div data-sly-resource="${'navigation' @ resourceType='gskwebplatform/components/content/common/navigation'}"></div>
+
+  		</header>
+
+    </sly>
+</sly>

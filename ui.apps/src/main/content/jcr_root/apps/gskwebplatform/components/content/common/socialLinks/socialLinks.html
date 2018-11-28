@@ -1,0 +1,55 @@
+<div data-sly-test="${wcmmode.edit}">
+	Configure Social Links Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='gsk-platform.social-links'}"/>
+
+<sly data-sly-test="${!properties.disableComponent}">
+	<sly data-sly-use.commonModel="com.gsk.web.platform.gsk_aem_web_platform.core.models.common.BaseComponentModel">
+		<sly data-sly-use.model="com.gsk.web.platform.gsk_aem_web_platform.core.models.common.SocialLinksModel">
+
+            <div class="social-links social-icons">
+                <p>${properties.sectionHeading}</p>
+                <ul class="list-inline">
+                    <li data-sly-test="${properties.includeFacebook}">
+                        <a title="facebook" href="${properties.facebookUrl}" target="${properties.openInNewWindow == 'true' ? '_blank' : ''}">
+                            <span class="icon-fb">
+								<img src="assets/images/facebook-footer.svg" alt="facebook" />
+                            </span>
+                        </a>
+                    </li>
+                    <li data-sly-test="${properties.includeTwitter}">
+                        <a title="twitter" href="${properties.twitterUrl}" target="${properties.openInNewWindow == 'true' ? '_blank' : ''}">
+                            <span class="icon-tw">
+								<img src="assets/images/twitter-footer.svg" alt="twitter" />
+                            </span>
+                        </a>
+                    </li>
+                    <li data-sly-test="${properties.includeGoogle}">
+                        <a title="google" href="${properties.googleUrl}" target="${properties.openInNewWindow == 'true' ? '_blank' : ''}">
+                            <span class="icon-go">
+								<img src="assets/images/google-footer.svg" alt="google" />
+                            </span>
+                        </a>
+                    </li>
+                    <li data-sly-test="${properties.includeYoutube}">
+                        <a title="youtube" href="${properties.youtubeUrl}" target="${properties.openInNewWindow == 'true' ? '_blank' : ''}">
+                            <span class="icon-yt">
+								<img src="assets/images/youtube-footer.svg" alt="youtube" />
+                            </span>
+                        </a>
+                    </li>
+                    <li data-sly-test="${properties.includeInstagram}">
+                        <a title="instagram" href="${properties.instagramUrl}" target="${properties.openInNewWindow == 'true' ? '_blank' : ''}">
+                            <span class="icon-in">
+								<img src="assets/images/instagram-footer.svg" alt="instagram" />
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </sly>
+    </sly>
+</sly>

@@ -1,0 +1,28 @@
+<div data-sly-test="${wcmmode.edit}">
+	<!--Configure Search Input Component-->
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.3/awesomplete.min.js"></script>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.css @ categories='re-platform.search-input'}"/>
+
+<sly data-sly-test="${!properties.disableComponent}">
+	<sly data-sly-use.model="com.re.aem.web.platform.models.common.SearchInputModel">
+	
+		<div id="search-input-${model.randomNumber}" class="search ${model.customStyleClass}">
+	   		<a>
+	        	<span class="${model.searchLogoClass} icon-search"></span>
+	        </a> 
+
+            <div class="search-bar searchInp" data-auto-search-count=${properties.autoSuggestMaxResultCount} data-auto-suggest-count=${properties.searchCountKeyword}>
+				<input class="input-field search ui-autocomplete-input awesomplete" id="header-search" type="text" placeholder="${model.placeholderText}" autofocus="autofocus" data-search-url="${model.searchAPI}" data-filter="${model.searchContentType}" data-result-page="${model.searchResultPage}"/>
+	    		<span class="icon-close search-close"></span> 
+	    	</div>
+            <a class="hiddenSearch" data-location-url=${model.searchResultPage} hidden></a>
+	   	</div>
+	
+	</sly>
+	
+	 <sly data-sly-call="${clientlib.js @ categories='re-platform.search-input'}"/>
+</sly>

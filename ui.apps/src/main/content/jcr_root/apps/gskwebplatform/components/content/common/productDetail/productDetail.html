@@ -1,0 +1,106 @@
+<div data-sly-test="${wcmmode.edit}">
+	Configure Product Detail Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='gsk-web-platform.product-detail'}"/>
+
+<sly data-sly-test="${!properties.disableComponent}">
+	<sly data-sly-use.commonModel="com.gsk.web.platform.gsk_aem_web_platform.core.models.common.BaseComponentModel">
+
+			<div id="product-detail-${commonModel.component.randomNumber}" class="product-detail pro-desc ${commonModel.component.customStyleClass}">
+      			<section class="container-fluid">
+        			<div class="container">
+          				<div class="row">
+          	  				<div class="prod-desc-inner">
+              					<div class="col-md-12">
+                					<div class="row">
+                  						<div class="col-md-6">
+                    						<h1>Sensodyne<sup> &reg;</sup> <br> Rapid Relief</h1>
+                    						<h2>Mint</h2>
+                  						</div>
+                  						<div class="col-md-6">
+                    						<div class="pro-img">
+                      							<img class="img-responsive" src="assets/images/Product-Rapid-Relief-Mint-dt@2x.jpg" alt="Sensodyne Rapid Relief toothpaste in Mint" />
+                    						</div>
+                  						</div>
+                					</div>
+              					</div>
+              					<div class="col-md-12">
+                					<div class="row">
+                  						<div class="col-md-6 col-xs-12">
+                    						<div class="star-rating">
+                      							<ul class="list-inline">
+                        							<li>
+                                                    	<img class="img-responsive" src="assets/images/star.svg" alt="star rating" />
+                                                    </li>
+                                                    <li><img class="img-responsive" src="assets/images/star.svg" alt="star rating" /></li>
+                                                    <li><img class="img-responsive" src="assets/images/star.svg" alt="star rating" /></li>
+                                                    <li><img class="img-responsive" src="assets/images/star.svg" alt="star rating" /></li>
+                                                    <li><img class="img-responsive" src="assets/images/star.svg" alt="star rating" /></li>
+                                                    <li><a href="#">(120)</a></li>
+                      							</ul>
+                    						</div>
+                    						<div class="reviews">
+                      							<a href="#">Write a Review</a>
+                    						</div>
+                    						<button type="button" class="btn pro-btn pro-btn-props">Buy Now</button>
+                    						<button type="button" class="btn pro-btn pro-btn-props">Get Coupon</button>
+                  						</div>
+                  						<div class="col-md-6 col-xs-12">
+                    						<div class="prod-recommend text-center">
+                      							<ul class="list-inline">
+                        							<li class="text-left">
+                          								<h4>Also available in:</h4>
+                          								<a href="#">Extra Fresh</a>
+                        							</li>
+                        							<li>
+                                                    	<img src="assets/images/extra-fresh.jpg" alt="Product Rapid Relief extra fresh" />
+                        							</li>
+                      							</ul>
+                    						</div>
+                  						</div>
+                					</div>
+              					</div>
+            				</div>
+          				</div>
+        			</div>
+      			</section>
+    		</div>
+
+            <div class="product-benefits">
+      			<section class="container-fluid">
+        			<div class="container">
+         	 			<div class="row">
+            				<div class="col-md-12">
+              					<h3 class="text-uppercase text-center">Sensodyne is the #1 Dentist Recommended Brand <span>For Sensitive teeth</span></h3>
+            				</div>
+            				<div class="col-md-6">
+              					<ul>
+                                    <li>Sensitive teeth relief in 3 days</li>
+                                    <li>Helps whiten teeth*</li>
+                                    <li>Helps prevent and remove tooth stains</li>
+                                    <li>Freshness breath</li>
+                                    <li>Mint taste</li>
+                                    <li>Protects against cavities</li>
+                                    <li>Contains fluoride</li>
+                                    <li>Sensitivity relief and lasting</li>
+                                    <li>Sensitivity protection*</li>
+              					</ul>
+            				</div>
+            				<div class="col-md-6">
+              					<p><strong>Sensodyne Rapid Relief Mint</strong> toothpaste for sensitive teeth has a unique formulation
+                				with stannous fluoride that <strong>beats sensitivity pain fast.</strong></p>
+              					<p>It quickly creates a protective layer over your exposed dentin - the sensitive areas of your teeth.
+                				This
+                				helps keep outside triggers from reaching the nerves in your teeth. Providing clinically <strong>significant
+                  				sensitivity relief in 3 days,</strong> and thereafter, when brushing twice a day.</p>
+              					<p>* With twice daily brushing</p>
+            				</div>
+          				</div>
+        			</div>
+      			</section>
+    		</div>
+
+   	</sly>
+</sly>

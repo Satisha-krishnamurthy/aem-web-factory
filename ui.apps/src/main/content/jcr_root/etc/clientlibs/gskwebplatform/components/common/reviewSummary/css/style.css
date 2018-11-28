@@ -1,0 +1,30 @@
+ .customer-reviews h3 {
+     font-family: 'Roboto-Black', Sans-Serif;
+     font-weight: 700;
+     color: #fff;
+     font-size: 26px;
+ }
+
+ .customer-reviews .review-quotes img {
+     width: 55px;
+     margin-top: 30px;
+     margin-bottom: 10px;
+ }
+
+ .customer-reviews .blockquote {
+     border-left: none;
+ }
+
+ .customer-reviews .blockquote p {
+     color: #fff;
+     font-size: 20px;
+     line-height: 30px;
+ }
+
+ .customer-reviews blockquote footer {
+     margin-top: 40px;
+ }
+
+ .customer-reviews blockquote footer.blockquote-footer {
+     color: #fff;
+ }

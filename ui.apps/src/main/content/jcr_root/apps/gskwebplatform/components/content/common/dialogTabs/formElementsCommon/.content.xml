@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Form Element Configurations"
+    sling:resourceType="granite/ui/components/foundation/container">
+    <layout
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+    <items jcr:primaryType="nt:unstructured">
+        <columns
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+                <fieldLabel
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                    class="field-class"
+                    fieldLabel="Field Label"
+                    name="./fieldLabel"/>
+                <fieldName
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                    class="field-class"
+                    fieldLabel="Field Name"
+                    name="./fieldName"/>
+                <placeholderText
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                    class="field-class"
+                    fieldLabel="Placeholder Text"
+                    name="./placeholderText"/>
+                <fieldValue
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                    class="field-class"
+                    fieldLabel="Field Value"
+                    name="./fieldValue"/>
+                <mandatoryField
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                    defaultChecked="{Boolean}false"
+                    name="./mandatoryField"
+                    text="Mandatory Field?"
+                    uncheckedValue="{Boolean}false"
+                    value="{Boolean}true"/>
+                <readOnly
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                    defaultChecked="{Boolean}false"
+                    name="./readOnly"
+                    text="Read Only?"
+                    uncheckedValue="{Boolean}false"
+                    value="{Boolean}true"/>
+                <disableField
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                    defaultChecked="{Boolean}false"
+                    name="./disableField"
+                    text="Disable Field?"
+                    uncheckedValue="{Boolean}false"
+                    value="{Boolean}true"/>
+                <autofocusField
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                    defaultChecked="{Boolean}false"
+                    name="./autofocusField"
+                    text="Autofocus Field?"
+                    uncheckedValue="{Boolean}false"
+                    value="{Boolean}true"/>
+                <hideByDefault
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                    defaultChecked="{Boolean}false"
+                    name="./hideByDefault"
+                    text="Hide By Default"
+                    uncheckedValue="{Boolean}false"
+                    value="{Boolean}true"/>
+                <customFieldId
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                    class="field-class"
+                    fieldLabel="Custom Field Id"
+                    name="./customFieldId"/>
+                <customStyleClass
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                    class="field-class"
+                    fieldLabel="Custom Style Class"
+                    name="./customStyleClass"/>
+                <customConditionScript
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/textarea"
+                    class="field-class"
+                    fieldLabel="Custom Condition Script"
+                    name="./customConditionScript"/>
+                <customValidationScript
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/textarea"
+                    class="field-class"
+                    fieldLabel="Custom Validation Script"
+                    name="./customValidationScript"/>
+                <customValidationMessage
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/textarea"
+                    class="field-class"
+                    fieldLabel="Custom Validation Message"
+                    name="./customValidationMessage"/>
+                <customAttributes
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/multifield"
+                    class="full-width"
+                    eaem-nested=""
+                    fieldLabel="Custom Attributes">
+                    <field
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                        acs-commons-nested=""
+                        name="./customAttributes">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                            method="absolute"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <attribute
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                        allowBlank="true"
+                                        autoDelete="{Boolean}true"
+                                        fieldLabel="Attribute Name"
+                                        name="./attributeName"/>
+                                    <value
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                        allowBlank="true"
+                                        autoDelete="{Boolean}true"
+                                        fieldLabel="Attribute Value"
+                                        name="./attributeValue"/>
+                                </items>
+                            </column>
+                        </items>
+                    </field>
+                </customAttributes>
+                <align
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/select"
+                    fieldLabel="Align"
+                    name="./align"
+                    value="left">
+                    <items jcr:primaryType="nt:unstructured">
+                        <left
+                            jcr:primaryType="nt:unstructured"
+                            text="Left"
+                            value="left"/>
+                        <center
+                            jcr:primaryType="nt:unstructured"
+                            text="Center"
+                            value="center"/>
+                        <right
+                            jcr:primaryType="nt:unstructured"
+                            text="Right"
+                            value="right"/>
+                    </items>
+                </align>
+            </items>
+        </columns>
+    </items>
+</jcr:root>

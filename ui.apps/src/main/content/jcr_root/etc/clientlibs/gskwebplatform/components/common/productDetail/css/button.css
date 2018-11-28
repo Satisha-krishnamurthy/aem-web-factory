@@ -1,0 +1,24 @@
+.pro-btn {
+    border-radius: 0 14px;
+    padding: 16px 0;
+    border: transparent;
+    margin-right: 14px;
+    min-width: 170px;
+}
+
+.pro-btn-props {
+    font-family: 'Roboto-Black', Sans-Serif;
+    font-weight: 700;
+    background: #2498d5;
+    color: #fff;
+    font-size: 16px;
+}
+
+@media(max-width:767px) {
+    .pro-btn {
+        min-width: 114px;
+    }
+    .learn-more-btn {
+        min-width: 230px;
+    }
+}

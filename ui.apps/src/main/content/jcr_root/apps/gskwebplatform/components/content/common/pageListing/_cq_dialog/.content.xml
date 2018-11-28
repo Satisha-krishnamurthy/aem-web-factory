@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Page Listing Component Dialog"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Page Listing Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <generalConfiguration
+                jcr:primaryType="nt:unstructured"
+                jcr:title="General Configuration"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <heading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Heading"
+                                name="./heading"/>
+                            <itemsCtaLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Common CTA Label for Result Items"
+                                name="./itemsCommonCtaLabel"/>
+                            <listingType
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                defaultValue="fixed"
+                                fieldLabel="Listing Type"
+                                name="./listingType">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <fixed
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Fixed List"
+                                        value="fixed"/>
+                                    <childPages
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Child Pages"
+                                        value="child-pages"/>
+                                    <dealer-specific
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Dealer Specific"
+                                        value="dealer-specific"/>
+                                </items>
+                            </listingType>
+                        </items>
+                    </columns>
+                </items>
+            </generalConfiguration>
+            <fixedListTab
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Fixed List Tab"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <pages
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/multifield"
+                                class="full-width"
+                                eaem-nested=""
+                                fieldDescription="Click '+' to add a new page"
+                                fieldLabel="Page References">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                    acs-commons-nested=""
+                                    name="./fixedPages">
+                                    <layout
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                                        method="absolute"/>
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <pagePath
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                    fieldLabel="Select Page"
+                                                    name="./pagePath"
+                                                    rootPath="/content/royal-enfield"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </pages>
+                        </items>
+                    </columns>
+                </items>
+            </fixedListTab>
+            <childPagesTab
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Auto fetch child pages"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <parentPagePath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldLabel="Select Parent Page"
+                                name="./parentPagePath"
+                                rootPath="/content/royal-enfield"/>
+                            <orderBy
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                defaultValue="hierarchy"
+                                fieldLabel="Order By"
+                                id="orderBy"
+                                name="./orderBy">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <hierarchy
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Page Hierarchy (Dafault)"
+                                        value="hierarchy"/>
+                                    <title
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Title"
+                                        value="title"/>
+                                    <date
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Date"
+                                        value="date"/>
+                                </items>
+                            </orderBy>
+                            <loadMoreText
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Load More Text"
+                                name="./loadMoreText"/>
+                            <loadMoreLink
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Load More Link"
+                                name="./loadMoreLink"/>
+                        </items>
+                    </columns>
+                </items>
+            </childPagesTab>
+            <view
+                jcr:primaryType="nt:unstructured"
+                jcr:title="View"
+                sling:resourceType="granite/ui/components/foundation/include"
+                path="gskwebplatform/components/content/common/dialogTabs/view"/>
+        </items>
+    </content>
+</jcr:root>

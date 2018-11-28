@@ -1,0 +1,11 @@
+<div data-sly-test="${wcmmode.edit}">
+	Configure Heading Component
+</div>
+
+<sly data-sly-test="${!properties.disableComponent}">
+	<sly data-sly-use.commonModel="com.gsk.web.platform.gsk_aem_web_platform.core.models.common.BaseComponentModel">
+		<div id="heading-${commonModel.component.randomNumber}" class="heading ${commonModel.component.customStyleClass}">
+        	<h2 data-sly-element="${properties.headingType}" class="text-heading ${properties.headingStyle}">${properties.headingText}</h2>
+		</div>
+    </sly>
+</sly>

@@ -1,0 +1,50 @@
+<div data-sly-test="${wcmmode.edit}">
+	Configure Review Summary Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='gsk-web-platform.teaser'}"/>
+
+<sly data-sly-test="${!properties.disableComponent}">
+	<sly data-sly-use.commonModel="com.gsk.web.platform.gsk_aem_web_platform.core.models.common.BaseComponentModel">
+
+		<div id="review-summary-${commonModel.component.randomNumber}" class="review-summary ${commonModel.component.customStyleClass}">
+			<div class="customer-reviews">
+      			<section class="container-fluid">
+        			<div class="container">
+         		 		<div class="row">
+            				<div class="col-md-12">
+              					<h3 class="text-center">Customer Reviews</h3>
+            				</div>
+            				<div class="col-md-12 ">
+              					<div class="review-quotes">
+                					<img class="img-responsive center-block " src="assets/images/quote.svg" alt="customer reviews" />
+              					</div>
+            				</div>
+            				<div class="col-md-12 text-center">
+              					<div class="star-rating">
+                					<ul class="list-inline">
+                                   		<li><img class="img-responsive" src="assets/images/customer-star.svg" alt="star rating" /></li>
+                                      	<li><img class="img-responsive" src="assets/images/customer-star.svg" alt="star rating" /></li>
+                                      	<li><img class="img-responsive" src="assets/images/customer-star.svg" alt="star rating" /></li>
+                                      	<li><img class="img-responsive" src="assets/images/customer-star.svg" alt="star rating" /></li>
+                                      	<li><img class="img-responsive" src="assets/images/customer-star.svg" alt="starrating" /></li>
+                					</ul>
+                					<p class="star-rating-text">5.0 Customer Rating</p>
+              					</div>
+            				</div>
+            				<div class="col-md-8 col-md-offset-2">
+              					<blockquote class="blockquote text-center">
+                					<p>“After 3 days of using this toothpaste, there was a notable difference in my sensitivity to sugar,
+                  					cold drinks, and my morning coffee. Definitely going to buy again.”</p>
+                					<footer class="blockquote-footer "> Kgee314, Pensacola, FL </footer>
+              					</blockquote>
+            				</div>
+          				</div>
+        			</div>
+      			</section>
+    		</div>
+        </div>
+
+	</sly>
+</sly>

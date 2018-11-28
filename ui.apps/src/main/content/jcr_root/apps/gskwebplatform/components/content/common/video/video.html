@@ -1,0 +1,27 @@
+<div data-sly-test="${wcmmode.edit}">
+	Configure Video Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='gsk-web-platform.video'}"/>
+
+<sly data-sly-test="${!properties.disableComponent}">
+	<sly data-sly-use.commonModel="com.gsk.web.platform.gsk_aem_web_platform.core.models.common.BaseComponentModel">
+
+		<div id="video-${commonModel.component.randomNumber}" class="video ${commonModel.component.customStyleClass}">
+
+            <div class="dentist-video">
+      			<div class="dentist-title text-center">
+        			<h3>What Dentist Recommend for Fast Sensitivity Relief</h3>
+      			</div>
+      			<div class="video-thumb">
+        			<div class="embed-responsive embed-responsive-16by9">
+          				<iframe class="embed-responsive-item" tabindex="0" title="sensodynevideo" width="560" height="315" src="https://www.youtube.com/embed/ylb9nQkJfso" frameborder="0"></iframe>
+        			</div>
+      			</div>
+   	 		</div>
+
+        </div>
+
+	</sly>
+</sly>

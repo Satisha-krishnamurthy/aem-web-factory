@@ -1,0 +1,16 @@
+.product-benefits h3 {
+    color: #283176;
+    font-family: 'Roboto-Black', Sans-Serif;
+    font-weight: 700;
+    margin-bottom: 40px;
+    font-size: 22px;
+}
+
+.product-benefits h3 span {
+    font-weight: 400;
+    font-family: 'Roboto-Light', Sans-Serif;
+}
+
+.product-benefits p, .product-benefits li {
+    font-size: 18px;  
+}

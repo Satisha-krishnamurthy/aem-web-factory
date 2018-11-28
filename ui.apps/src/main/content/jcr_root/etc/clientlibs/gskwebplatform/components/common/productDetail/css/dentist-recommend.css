@@ -1,0 +1,50 @@
+.dentist-recommend {
+    background: #f1f2f4;
+}
+
+.dentist-recommend h3, .dentist-video h3 {
+    color: #032466;
+    font-family: 'Roboto-Black', Sans-Serif;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.dentist-recommend h4 {
+    color: #032466;
+    font-family: 'Roboto-Black', Sans-Serif;
+    font-weight: 700;
+}
+
+.title-border {
+    border-bottom: 3px solid #2498d5;
+    width: 80px;
+    margin: 0 auto 40px;
+}
+
+.dentist-recommend .dentist-title {
+    margin: 40px auto;
+}
+
+.dentist-recommend .dentist-text {
+    margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.dentist-video .video-thumb {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+@media(min-width:767px) {
+    .dentist-video .video-thumb {
+        width: 600px;
+        margin: 30px auto 60px;
+    }
+}
+
+@media(max-width:767px) {
+    .dentist-recommend .dentist-text {
+        text-align: left;
+    }
+}

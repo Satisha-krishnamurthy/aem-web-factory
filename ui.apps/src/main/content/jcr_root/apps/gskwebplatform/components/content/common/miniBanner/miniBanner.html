@@ -1,0 +1,24 @@
+<div data-sly-test="${wcmmode.edit}">
+	Configure Mini Banner Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='gsk-web-platform.mini-banner'}"/>
+
+<sly data-sly-test="${!properties.disableComponent}">
+	<sly data-sly-use.commonModel="com.gsk.web.platform.gsk_aem_web_platform.core.models.common.BaseComponentModel">
+
+		<section id="mini-banner-${commonModel.component.randomNumber}" class="mini-banner adv-section ${commonModel.component.customStyleClass}">
+      		<div class="adv-banner">
+        		<div class="adv-inner-banner">
+          			<div class="coupon-code">
+            			<h3>Save</h3>
+            			<a href="#">Get Your Coupon</a>
+            			<div class="title-border"></div>
+          			</div>
+        		</div>
+        	</div>
+    	</section>
+
+   	</sly>
+</sly>

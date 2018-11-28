@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Primary Menu Component Dialog"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Primary Menu Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <config
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Configurations"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <displayMode
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                defaultValue="re-faq"
+                                fieldDescription="Select Mode - Bootstrap or RE FAQ"
+                                fieldLabel="Display Mode"
+                                name="./displayMode">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <option1
+                                        jcr:primaryType="nt:unstructured"
+                                        text="RE FAQ"
+                                        value="re-faq"/>
+                                    <option2
+                                        jcr:primaryType="nt:unstructured"
+                                        text="General Bootstrap"
+                                        value="general-bootstrap"/>
+                                </items>
+                            </displayMode>
+                            <sectionHeading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="Section Heading"
+                                name="./sectionHeading"/>
+                            <multipleOpenItems
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                fieldDescription="Check this checkbox to display multiple panels at the same time without one collapsing when the other one is opened."
+                                name="./allowMultipleOpenItems"
+                                text="Allow Multiple Open Items"
+                                value="{Boolean}true"/>
+                            <accordianItems
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/multifield"
+                                class="full-width"
+                                eaem-nested=""
+                                fieldLabel="Accordian Config">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                    acs-commons-nested=""
+                                    name="./accordianItems">
+                                    <layout
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                                        method="absolute"/>
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <heading
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    allowBlank="true"
+                                                    autoDelete="{Boolean}true"
+                                                    fieldLabel="Heading"
+                                                    name="./heading"/>
+                                                <styleClass
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    allowBlank="true"
+                                                    autoDelete="{Boolean}true"
+                                                    fieldLabel="Style Class"
+                                                    name="./styleClass"/>
+                                                <expanded
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                    name="./expanded"
+                                                    text="Expanded by Default"
+                                                    value="{Boolean}true"/>
+                                                <bodyType
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/select"
+                                                    fieldDescription="Select Item Body Type"
+                                                    fieldLabel="Item Body Type"
+                                                    name="./bodyType">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <option1
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Text"
+                                                            value="text"/>
+                                                        <option2
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Other Component"
+                                                            value="other"/>
+                                                    </items>
+                                                </bodyType>
+                                                <bodyText
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    allowBlank="true"
+                                                    autoDelete="{Boolean}true"
+                                                    fieldLabel="Item Body Text"
+                                                    name="./bodyText"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </accordianItems>
+                        </items>
+                    </column>
+                </items>
+            </config>
+            <view
+                jcr:primaryType="nt:unstructured"
+                jcr:title="View"
+                sling:resourceType="granite/ui/components/foundation/include"
+                path="gskwebplatform/components/content/common/dialogTabs/view"/>
+        </items>
+    </content>
+</jcr:root>

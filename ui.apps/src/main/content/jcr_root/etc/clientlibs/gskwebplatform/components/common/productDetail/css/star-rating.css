@@ -1,0 +1,27 @@
+ .star-rating li img {
+     width: 24px;
+ }
+
+ .star-rating {
+     padding-top: 10px;
+ }
+
+ .star-rating li:last-child a {
+     font-size: 22px;
+     font-weight: 600;
+     vertical-align: text-bottom;
+ }
+
+ .star-rating .list-inline-item:not(:last-child) {
+     margin-right: 0;
+ }
+
+ .star-rating .reviews {
+     font-size: 18px;
+     padding: 10px 0 30px;
+ }
+
+ .star-rating-text {
+     color: #fff;
+     font-size: 16px;
+ }
