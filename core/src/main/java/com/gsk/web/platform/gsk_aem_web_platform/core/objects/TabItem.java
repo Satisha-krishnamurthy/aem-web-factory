@@ -22,6 +22,7 @@ public class TabItem {
 	private String video;
 	private String videoType;
 	private String alignmentType;
+	private String parsysId;
 	
 	public String getTabTitle() {
 		return tabTitle;
@@ -89,5 +90,10 @@ public class TabItem {
 	public void setAlignmentType(String alignmentType) {
 		this.alignmentType = alignmentType;
 	}
-	
+	public String getParsysId() {
+		return parsysId;
+	}
+	public void setParsysId(String parsysId) {
+		this.parsysId = parsysId;
+	}
 }

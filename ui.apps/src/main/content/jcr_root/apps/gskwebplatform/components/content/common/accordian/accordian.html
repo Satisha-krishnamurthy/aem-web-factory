@@ -1,0 +1,32 @@
+<div data-sly-test="${wcmmode.edit}">
+	Configure Accordian Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='gsk-web-platform.accordian'}"/>
+
+
+<sly data-sly-test="${!properties.disableComponent}">
+	<sly data-sly-use.commonModel="com.gsk.web.platform.gsk_aem_web_platform.core.models.common.BaseComponentModel">
+		<sly data-sly-use.model="com.gsk.web.platform.gsk_aem_web_platform.core.models.common.TabsModel">
+
+            <div id="accordian-${commonModel.component.randomNumber}" class="accordian ${commonModel.component.customStyleClass}">
+				<div id="accordion" data-sly-list="${model.tabItems}">
+  					<div class="card">
+    					<div class="card-header">
+      						<a class="card-link" data-toggle="collapse" href="#tab${itemList.count}">
+        						${item.tabTitle}
+      						</a>
+    					</div>
+    					<div id="tab${itemList.count}" class="collapse ${itemList.count == 1 ? 'show'}" data-parent="#accordion-${commonModel.component.randomNumber}">
+      						<div class="card-body">
+        						<div data-sly-resource="${@path=item.parsysId, resourceType='wcm/foundation/components/parsys'}"></div>
+      						</div>
+    					</div>
+  					</div>
+				</div>
+            </div>
+
+        </sly>
+    </sly>
+</sly>

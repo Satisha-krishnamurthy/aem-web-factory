@@ -1,0 +1,22 @@
+<div data-sly-test="${wcmmode.edit}">
+    Configure CTA Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='gsk-web-platform.cta'}"/>
+
+<sly data-sly-test="${!properties.disableComponent}">
+	<sly data-sly-use.commonModel="com.gsk.web.platform.gsk_aem_web_platform.core.models.common.BaseComponentModel">
+		<sly data-sly-use.model="com.gsk.web.platform.gsk_aem_web_platform.core.models.common.CTAModel">
+
+            <div id="column-grid-${commonModel.component.randomNumber}" class="column-grid ${commonModel.component.customStyleClass}">
+                <sly data-sly-list="${model.ctaList}"> 
+                    <a class="custom-btn bor ${item.iconClass} ${item.iconType}" href="${item.url}" target="${item.openInNewWindow == 'true' ? '_blank' : ''}">
+                        ${item.text}
+                    </a>
+                </sly>
+			</div>
+
+		</sly>
+	</sly>
+</sly>

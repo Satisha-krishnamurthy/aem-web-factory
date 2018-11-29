@@ -1,0 +1,44 @@
+<div data-sly-test="${wcmmode.edit}">
+	Configure Tabs Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='gsk-web-platform.tabs'}"/>
+
+<sly data-sly-test="${!properties.disableComponent}">
+	<sly data-sly-use.commonModel="com.gsk.web.platform.gsk_aem_web_platform.core.models.common.BaseComponentModel">
+		<sly data-sly-use.model="com.gsk.web.platform.gsk_aem_web_platform.core.models.common.TabsModel">
+
+            <div data-sly-test="${model.viewType == 'tabs'}" id="tabs-${commonModel.component.randomNumber}" class="tabs ${commonModel.component.customStyleClass}">
+
+                <ul class="nav nav-tabs" data-sly-list="${model.tabItems}">
+                    <li class="nav-item">
+                        <a class="nav-link ${item.isActive == 'true' ? 'active' : ''}" data-toggle="tab" href="#tab${itemList.count}">${item.tabTitle}</a>
+                    </li>
+                </ul>
+            
+                <div class="tab-content" data-sly-list="${model.tabItems}">
+                    <div class="${wcmmode.edit ? '' : 'tab-pane'} container ${item.isActive == 'true' ? 'active' : 'fade'}" id="tab${itemList.count}">
+						<div data-sly-resource="${@path=item.parsysId, resourceType='wcm/foundation/components/parsys'}"></div>
+                    </div>
+                </div>
+           </div>
+
+           <div data-sly-test="${model.viewType == 'accordian'}" id="accordion" data-sly-list="${model.tabItems}">
+  				<div class="card">
+    				<div class="card-header">
+      					<a class="card-link" data-toggle="collapse" href="#tab${itemList.count}">
+        					${item.tabTitle}
+      					</a>
+    				</div>
+    				<div id="tab${itemList.count}" class="collapse ${itemList.count == 1 ? 'show' : ''}" data-parent="#accordion-${commonModel.component.randomNumber}">
+      					<div class="card-body">
+        					<div data-sly-resource="${@path=item.parsysId, resourceType='wcm/foundation/components/parsys'}"></div>
+      					</div>
+    				</div>
+  				</div>
+			</div>
+
+      	</sly>
+  	</sly>
+</sly>

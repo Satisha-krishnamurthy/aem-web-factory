@@ -40,7 +40,7 @@ public class ColumnGridModelImpl implements ColumnGridModel {
 	@ValueMapValue @Optional
 	private String sectionHeading;
 	
-	@Inject @Optional
+	@ValueMapValue @Optional
 	@Default(intValues=1)
 	private int columns;
 	
