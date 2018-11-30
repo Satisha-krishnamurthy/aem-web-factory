@@ -16,10 +16,13 @@
                         <a class="nav-link ${item.isActive == 'true' ? 'active' : ''}" data-toggle="tab" href="#tab${itemList.count}">${item.tabTitle}</a>
                     </li>
                 </ul>
-            
+
                 <div class="tab-content" data-sly-list="${model.tabItems}">
+                	<h5 data-sly-test="${wcmmode.edit}">Add Components for Tab ${itemList.count}</h5>
                     <div class="${wcmmode.edit ? '' : 'tab-pane'} container ${item.isActive == 'true' ? 'active' : 'fade'}" id="tab${itemList.count}">
-						<div data-sly-resource="${@path=item.parsysId, resourceType='wcm/foundation/components/parsys'}"></div>
+
+                        <div data-sly-resource="${@path=item.parsysId, resourceType='wcm/foundation/components/parsys'}"></div>
+
                     </div>
                 </div>
            </div>
@@ -31,9 +34,12 @@
         					${item.tabTitle}
       					</a>
     				</div>
-    				<div id="tab${itemList.count}" class="collapse ${itemList.count == 1 ? 'show' : ''}" data-parent="#accordion-${commonModel.component.randomNumber}">
-      					<div class="card-body">
+    				<div id="tab${itemList.count}" class="${wcmmode.edit ? '' : 'collapse'} ${itemList.count == 1 ? 'show' : ''}" data-parent="#accordion-${commonModel.component.randomNumber}">
+						<h5 data-sly-test="${wcmmode.edit}">Add Components for Tab ${itemList.count}</h5>
+                        <div class="card-body">
+
         					<div data-sly-resource="${@path=item.parsysId, resourceType='wcm/foundation/components/parsys'}"></div>
+
       					</div>
     				</div>
   				</div>
