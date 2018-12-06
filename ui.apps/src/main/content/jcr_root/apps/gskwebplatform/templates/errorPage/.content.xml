@@ -7,5 +7,5 @@
     ranking="{Long}3">
     <jcr:content
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="re-platform/components/page/errorPage"/>
+        sling:resourceType="gskwebplatform/components/page/errorPage"/>
 </jcr:root>

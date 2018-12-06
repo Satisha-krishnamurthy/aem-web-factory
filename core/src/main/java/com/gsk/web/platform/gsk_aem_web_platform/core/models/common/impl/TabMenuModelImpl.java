@@ -30,7 +30,7 @@ import javax.annotation.PostConstruct;
 public class TabMenuModelImpl implements TabMenuModel {
 
 	/** Logger. **/
-	private static final Logger log = LoggerFactory.getLogger(BasePageModelImpl.class);
+	private static final Logger log = LoggerFactory.getLogger(TabMenuModelImpl.class);
 	
 	@ValueMapValue @Optional
 	@Default(values="tabs")
